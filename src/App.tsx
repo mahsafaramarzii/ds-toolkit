@@ -1,6 +1,13 @@
 import { Button } from "./components/atoms/Button";
 import { Card } from "./components/molecules/Card"
+import { useState } from "react";
+import { Modal } from "./components/molecules/Madol";
+
 function App() {
+
+
+  const [open, setOpen] = useState(false);
+
   return (
     
     <div
@@ -28,9 +35,29 @@ function App() {
           View Details
         </button>
       </Card>
+      
     ))}
+    <Button
+        onClick={() => setOpen(true)}
+      >
+        Open Modal
+      </Button>
+      <Modal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        title="DS Toolkit"
+      >
+        <p>
+          Reusable modal component.
+        </p>
+      </Modal>
+
   </div>
   );
 }
 
 export default App;
+
+
+
+  
