@@ -2,6 +2,7 @@ import { Button } from "./components/atoms/Button";
 import { Card } from "./components/molecules/Card"
 import { useState } from "react";
 import { Modal } from "./components/molecules/Madol";
+import { Dropdown } from "./components/molecules/Dropdown";
 
 function App() {
 
@@ -37,6 +38,25 @@ function App() {
       </Card>
       
     ))}
+    <Dropdown
+  items={[
+    {
+      label: "React",
+      value: "react",
+    },
+    {
+      label: "Vue",
+      value: "vue",
+    },
+    {
+      label: "Angular",
+      value: "angular",
+    },
+  ]}
+  onSelect={(value) =>
+    console.log(value)
+  }
+/>
     <Button
         onClick={() => setOpen(true)}
       >
