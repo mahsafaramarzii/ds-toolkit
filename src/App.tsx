@@ -3,9 +3,22 @@ import { Card } from "./components/molecules/Card"
 import { useState } from "react";
 import { Modal } from "./components/molecules/Madol";
 import { Dropdown } from "./components/molecules/Dropdown";
-
+import { DataTable } from "./components/molecules/DataTable";
 function App() {
 
+  const users = [
+    {
+      id: 1,
+      name: "John Doe",
+      email: "john@example.com",
+    },
+    {
+      id: 2,
+      name: "Jane Doe",
+      email: "jane@example.com",
+    },
+  ];
+  
 
   const [open, setOpen] = useState(false);
 
@@ -71,7 +84,19 @@ function App() {
           Reusable modal component.
         </p>
       </Modal>
-
+      <DataTable
+    data={users}
+    columns={[
+      {
+        key: "name",
+        header: "Name",
+      },
+      {
+        key: "email",
+        header: "Email",
+      },
+    ]}
+  />;
   </div>
   );
 }
