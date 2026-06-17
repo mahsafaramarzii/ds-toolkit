@@ -1,12 +1,13 @@
-import { Button } from "./components/atoms/Button";
+ import { Button } from "./components/atoms/Button";
 import { Card } from "./components/molecules/Card"
 import { useState } from "react";
 import { Modal } from "./components/molecules/Madol";
-import { Dropdown } from "./components/molecules/Dropdown";
-import { DataTable } from "./components/molecules/DataTable";
+import { Dropdown } from "./components/molecules/Dropdown"; 
+import { useTheme } from "./context/Themecontex";
+ import { DataTable } from "./components/molecules/DataTable"; 
 function App() {
-
-  const users = [
+  const { theme, toggleTheme } = useTheme();
+const users = [
     {
       id: 1,
       name: "John Doe",
@@ -18,13 +19,19 @@ function App() {
       email: "jane@example.com",
     },
   ];
-  
+   
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); 
 
   return (
-    
-    <div
+    <>  <div
+    className={
+      theme === "dark"
+        ? "min-h-screen bg-gray-900 text-white"
+        : "min-h-screen bg-white text-black"
+    }
+  >
+   <div
     className="
       grid
       gap-6
@@ -69,7 +76,13 @@ function App() {
   onSelect={(value) =>
     console.log(value)
   }
-/>
+/> 
+</div> 
+
+
+
+
+
     <Button
         onClick={() => setOpen(true)}
       >
@@ -81,28 +94,30 @@ function App() {
         title="DS Toolkit"
       >
         <p>
-          Reusable modal component.
-        </p>
+          Reusable modal   component.
+       </p>
       </Modal>
-      <DataTable
-    data={users}
-    columns={[
-      {
-        key: "name",
-        header: "Name",
-      },
-      {
-        key: "email",
-        header: "Email",
-      },
+      <DataTable data={users}  columns={[ {    key: "name",  header: "Name",  }, { key: "email", header: "Email",},
     ]}
-  />;
-  </div>
-  );
-}
+  /> 
 
+<button
+  onClick={toggleTheme}
+  className="
+    mb-6
+    rounded-lg
+    border
+    px-4
+    py-2
+  "
+>
+  {theme === "light"
+    ? "🌙 Dark Mode"
+    : "☀️ Light Mode"}
+</button>
+  </div>
+  </>
+)
+}
 export default App;
 
-
-
-  
