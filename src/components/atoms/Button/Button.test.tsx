@@ -35,3 +35,27 @@ it("calls onClick when clicked", async () => {
   
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
+
+  it("renders disabled button", () => {
+    render(
+      <Button disabled>
+        Disabled Button
+      </Button>
+    );
+  
+    expect(
+      screen.getByRole("button")
+    ).toBeDisabled();
+  });
+  it("renders test id correctly", () => {
+    render(
+      <Button data-testid="button-test">
+        Test Button
+      </Button>
+    );
+  
+    expect(
+      screen.getByTestId("button-test")
+    ).toBeInTheDocument();
+  });
+  
