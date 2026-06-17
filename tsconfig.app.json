@@ -4,7 +4,11 @@
     "target": "es2022",
     "lib": ["ES2023", "DOM"],
     "module": "esnext",
-    "types": ["vite/client"],
+    "types": [
+      "vite/client",
+      "vitest/globals",
+      "@testing-library/jest-dom"
+    ],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -22,4 +26,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]
+
 }
