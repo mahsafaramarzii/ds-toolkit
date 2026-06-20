@@ -19,6 +19,45 @@ https://ds-toolkit-yh7p.vercel.app
 * Theme Support (Light / Dark Mode)
 
 ## Components
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Storybook
+* Vitest
+* React Testing Library
+* CSS Modules
+
+## Installation
+
+```bash
+git clone https://github.com/mahsafaramarzii/ds-toolkit.git
+
+cd ds-toolkit
+
+npm install
+```
+
+## Development
+
+```bash
+npm run dev
+```
+
+## Storybook
+
+```bash
+npm run storybook
+```
+
+## Testing
+
+```bash
+npx vitest run
+```
+
 
 ### Atoms
 
