@@ -14,21 +14,21 @@ export const Card = forwardRef<
         ref={ref}
         data-testid="card"
         className={clsx(
-            styles.card,
-          
-            "bg-white",
-            "border",
-            "border-gray-200",
-          
-            "shadow-sm",
-          
-            "p-6",
-          
-            "flex",
-            "flex-col",
-          
-            className
-          )}
+          styles.card,
+        
+          "bg-white",
+          "border",
+          "border-gray-200",
+        
+          "shadow-sm",
+        
+          "p-6",
+        
+          "flex",
+          "flex-col",
+        
+          className
+        )}
         {...props}
       >
         {children}

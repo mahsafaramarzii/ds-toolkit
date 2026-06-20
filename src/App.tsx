@@ -1,11 +1,18 @@
- import { Button } from "./components/atoms/Button";
-import { Card } from "./components/molecules/Card"
-import { useState } from "react";
-import { Modal } from "./components/molecules/Madol";
-import { Dropdown } from "./components/molecules/Dropdown"; 
-import { useTheme } from "./context/Themecontex";
- import { DataTable } from "./components/molecules/DataTable"; 
-function App() {
+ //import { Button } from "./components/atoms/Button";
+//import { Card } from "./components/molecules/Card"
+//import { useState } from "react";
+//import { Modal } from "./components/molecules/Madol";
+//import { Dropdown } from "./components/molecules/Dropdown"; 
+//import { useTheme } from "./context/Themecontex";
+ //import { DataTable } from "./components/molecules/DataTable"; 
+
+
+ function App() {
+
+
+
+
+  /* 
   const { theme, toggleTheme } = useTheme();
 const users = [
     {
@@ -116,7 +123,7 @@ const users = [
     : "☀️ Light Mode"}
 </button>
   </div>
-  </>
+  </>*/
 )
 }
 export default App;
