@@ -19,6 +19,21 @@ https://ds-toolkit-yh7p.vercel.app
 * Theme Support (Light / Dark Mode)
 
 ## Components
+
+
+### Atoms
+
+* Button
+
+### Molecules
+
+* Card
+* Dropdown
+* Modal
+
+### Organisms
+
+* DataTable
 ## Tech Stack
 
 * React
@@ -58,17 +73,38 @@ npm run storybook
 npx vitest run
 ```
 
+## Current Test Coverage
 
-### Atoms
+### Button
 
-* Button
+* Render component
+* Click handler
+* Disabled state
+* Custom test id
 
-### Molecules
+### Modal
 
-* Card
-* Dropdown
-* Modal
+* Open state
+* Closed state
+* Close button interaction
+* Overlay interaction
+* Content interaction
 
-### Organisms
+## Future Improvements
 
-* DataTable
+* Additional component variants
+* Improved accessibility coverage
+* Expanded test coverage
+* Component publishing to npm
+* Enhanced design tokens system
+
+## Author
+
+Mahsa Faramarzi
+
+GitHub:
+https://github.com/mahsafaramarzii
+
+---
+
+This project was built as a reusable component library and design system showcase using modern frontend development practices.
